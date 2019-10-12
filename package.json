@@ -1,0 +1,17 @@
+{
+  "name": "package",
+  "version": "1.0.0",
+  "description": "",
+  "main": "confi.js",
+  "scripts": {
+    "test": "spec.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jasmine-allure-reporter": "^1.0.2"
+  },
+  "devDependencies": {
+    "protractor": "^5.4.2"
+  }
+}
