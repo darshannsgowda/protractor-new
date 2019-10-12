@@ -12,11 +12,11 @@ var LoginPage = function(){
         await browser.get('https://qa.votercircle.com/user/login');
     };
 
-    this.Email = async function(){
+    this.Email = async function(Eml){
         await LoginEmail.sendKeys(Eml);
     };
 
-    this.Password = async function(){
+    this.Password = async function(Pwd){
         await LoginPassword.sendKeys(Pwd);
     };
 

@@ -5,5 +5,5 @@ exports.config = {
     capabilities: {
       'browserName': 'chrome'
     },
-    specs: ['C:\\Users\\darsh\\eclipse-workspace\\Proprotractor\\Client_Module\\Tests\\CreationOfAction.js']
+    specs: ['./tests/clientmodule/Login_to_ClientPlatform.js']
   }
