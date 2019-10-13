@@ -10,6 +10,41 @@ var ActionsPage = function(){
     var schedularNextBtn = element(by.css('button.next-btn'));
     var ContinueEditngActnBtn = element(by.css('button.continue-edit-btn'));
 
+    this.createnewactionBtn = async function(){
+        await CreateActionBtn.click();
+    }
+
+    this.selectemailtypeaction = async function(){
+        await EmailorTextFriends.click();
+    }
+
+    this.actionname = async function(){
+        await Actionnamefield.sendKeys(actionnme);
+    }
+
+    this.buildactionBtn = async function(){
+        await BuildThisActionBtn.click();
+    }
+
+    this.actionheadline = async function(){
+        await Headlinefield.sendKeys(headline);
+    }
+
+    this.headlinenextBtn = async function(){
+       await NextBtn.click();
+    }
+
+    this.sharenextBtn = async function(){
+        await ShareUpdateNextBtn.click();
+    }
+
+    this.schedulrnextBtn = async function(){
+        await schedularNextBtn.click();
+    }
+
+    this.continueEditBtn = async function(){
+        await ContinueEditngActnBtn.click();
+    }
 }
 
 module.exports = new ActionsPage();
