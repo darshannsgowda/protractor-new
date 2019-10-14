@@ -1,12 +1,13 @@
+// var random = require('../BaseClass');
 var LoginPage = function(){
     
-    var LoginEmail = element(by.id('#mat-input-0'));
-    var LoginPassword = element(by.id('#mat-input-1'));
+    var LoginEmail = element(by.css('input[placeholder="Enter your email address"]'));
+    var LoginPassword = element(by.css('input[type="password"]'));
     var LoginWithEmailBtn = element(by.xpath("//span[contains(text(),'Login with email')]"));
     var LoginWithGoogle =  element(by.css('div[class="social-signin"]'));
     var CantLoginlink = element(by.xpath("//a[contains(text(),'Can’t Login?')]"));
 
-    this.get = async function(){
+    this.getUrl = async function(){
        await browser.driver.manage().window().maximize();
        await browser.waitForAngularEnabled(false);
         await browser.get('https://qa.votercircle.com/user/login');
@@ -23,6 +24,9 @@ var LoginPage = function(){
     this.LoginBtn = async function(){
         await LoginWithEmailBtn.click();
     };
+
+    //create a seperate function for login
+    this.logi
 
 
 
