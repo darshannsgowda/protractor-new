@@ -8,7 +8,6 @@ describe('Login to supporter platform', function(){
         var SignInLink = element(by.xpath("//div//a[contains(text(),'Sign In')]"));
         SignInLink.click()
         browser.sleep(2000);
-        // var SignInWithGoogle =element(by.css('span.MuiButton-label-305'));
         var SignInWithGoogle = element(by.xpath("(//button[@type='button'])[2]"));
         SignInWithGoogle.click();
         browser.sleep(3000);
@@ -18,7 +17,6 @@ describe('Login to supporter platform', function(){
                 email.sendKeys("darshutest123@gmail.com");
                 var emailnextBtn=element(by.css('div[id="identifierNext"]'));
                 emailnextBtn.click();
-                // browser.manage().timeouts().implicitlyWait(3000);
                 browser.sleep(3000);
                 var password =element(by.css('input[type="password"]'));
                 password.sendKeys("voter123");

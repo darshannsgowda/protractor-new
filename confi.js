@@ -5,5 +5,5 @@ exports.config = {
     capabilities: {
       'browserName': 'chrome'
     },
-    specs: ['./tests/endtoend/AT.js']
+    specs: ['./tests/clientmodule/End_to_End_test1.js']
   }

@@ -39,7 +39,7 @@ var ActionsPage = function(){
         await ShareUpdateNextBtn.click();
     }
 
-    this.schedulrnextBtn = async function(){
+    this.shedulenxtBtn = async function(){
         await schedularNextBtn.click();
     }
 

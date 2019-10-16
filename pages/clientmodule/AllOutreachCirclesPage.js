@@ -1,5 +1,6 @@
 var AllOutreachCirclesPage = function(){
 
+    var AllOutreachCirclesPageTitle = element(by.xpath("//div[contains(text(),' All OutreachCircles ')]"));
     var OutreachCircleName = element(by.xpath("//div[contains(text(),' Fix Campaign ')]"));
     var Actionslink = element(by.xpath("(//span[contains(text(),'Actions')])[1]"));
 
@@ -9,6 +10,10 @@ var AllOutreachCirclesPage = function(){
 
     this.actionlink = async function(){
         await Actionslink.click();
+    }
+
+    this.AllcirclePagetitle = async function(){
+        await AllOutreachCirclesPageTitle
     }
 }
 

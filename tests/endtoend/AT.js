@@ -14,6 +14,7 @@ describe('creation of action with filter and verify the matching filer in suppor
                 await login.Password(logindata.Password);
                 await login.LoginBtn();
                 await browser.manage().timeouts().implicitlyWait(6000);
+                expect(element(by.xpath("//div[contains(text(),' All OutreachCircles ')]")).isPresent()).toBe(true);
                 await alloutreachcircles.actionlink();
                 await browser.sleep(3000);
         })
@@ -30,30 +31,31 @@ describe('creation of action with filter and verify the matching filer in suppor
                 await browser.sleep(2000);
                 await action.sharenextBtn();
                 await browser.sleep(3000);
-                await action.schedulrnextBtn();
+                // browser.wait(EC.elementToBeClickable(shedulenxtBtn()), 9000);
+                await action.shedulenxtBtn();
                 console.log('next button clicked');
                 await browser.sleep(8000);
                 // await action.continuesetupp();
                 // browser.manage().timeouts().implicitlyWait(4000);
         })
 
-        // it('setup email message',async function(){
-        //     await actioneditt.textmessageToggle();
-        //     await actioneditt.composeEmail();
-        //     await actioneditt.createemailBtn();
-        //     await actioneditt.enteremailName(actiondata.emailname);
-        //     await actioneditt.emailcontinueBtn();
-        //     await actioneditt.entersubject(actiondata.subject);
-        //     await actioneditt.addrecruitLink();
-        //     await actioneditt.clickonsaveBtn();
-        //     await actioneditt.clickonSaveandExitBtn();
-        // })
+        it('setup email message',async function(){
+            await actioneditt.textmessageToggle();
+            await actioneditt.composeEmail();
+            await actioneditt.createemailBtn();
+            await actioneditt.enteremailName(actiondata.emailname);
+            await actioneditt.emailcontinueBtn();
+            await actioneditt.entersubject(actiondata.subject);
+            await actioneditt.addrecruitLink();
+            await actioneditt.clickonsaveBtn();
+            await actioneditt.clickonSaveandExitBtn();
+        })
 
-        // it('Configure filter and save',async function(){
-        //     await actioneditt.voterfiltertogle();
-        //     await actioneditt.updatefilterLinkk();
-        //     await actioneditt.voterfiltrdropdwn();
-        //     await actioneditt.selectFiletype();
-        //     await actioneditt.savefilterBtn();
-        // })
+        it('Configure filter and save',async function(){
+            await actioneditt.voterfiltertogle();
+            await actioneditt.updatefilterLinkk();
+            await actioneditt.voterfiltrdropdwn();
+            await actioneditt.selectFiletype();
+            await actioneditt.savefilterBtn();
+        })
 })

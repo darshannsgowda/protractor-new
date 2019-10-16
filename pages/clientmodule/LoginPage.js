@@ -4,7 +4,11 @@ var LoginPage = function(){
     var LoginEmail = element(by.css('input[placeholder="Enter your email address"]'));
     var LoginPassword = element(by.css('input[type="password"]'));
     var LoginWithEmailBtn = element(by.xpath("//span[contains(text(),'Login with email')]"));
-    var LoginWithGoogle =  element(by.css('div[class="social-signin"]'));
+    var LoginWithGoogle =  element(by.css('img[alt="google signin button"]'));
+    var Googleemailfield = element(by.css('input[type="email"]'));
+    var GoogleemlnextBtn = element(by.xpath("//span//span[contains(text(),'Next')]"));
+    var Googlepasswordfield = element(by.css('input[type="password"]'));
+    var GooglepwdnextBtn = element(by.xpath("//span[contains(text(),'Next')]"));
     var CantLoginlink = element(by.xpath("//a[contains(text(),'Can’t Login?')]"));
 
     this.getUrl = async function(){
@@ -25,9 +29,25 @@ var LoginPage = function(){
         await LoginWithEmailBtn.click();
     };
 
-    //create a seperate function for login
-    this.logi
+    this.Loginwthgoogle = async function(){
+        await LoginWithGoogle.click();
+    }
 
+    this.LoginwithEmail = async function(){
+        await getUrl();
+        await Email();
+        await Password();
+        await LoginBtn();
+    }
+
+    this.LoginwithOath = async function(){
+        browser.getAllWindowHandles().then(function(handles){
+            browser.switchTo().window(handles[1]).then(function(){
+                
+
+            })
+        })  
+    }
 
 
 

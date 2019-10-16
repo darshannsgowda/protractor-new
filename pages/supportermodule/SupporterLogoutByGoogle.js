@@ -14,14 +14,14 @@ describe('Login and Logout to supporter platform using Google account', function
         browser.getAllWindowHandles().then(function(handles){
             browser.switchTo().window(handles[1]).then(function(){
                 var email = element(by.css('input[type="email"]'));
-                email.sendKeys("darshutest123@gmail.com");
+                email.sendKeys("darshutest1234@gmail.com");
                 console.log("Enter the email");
                 var emailnextBtn=element(by.css('div[id="identifierNext"]'));
                 emailnextBtn.click();
                 console.log("Click on next button");
                 browser.sleep(3000);
                 var password =element(by.css('input[type="password"]'));
-                password.sendKeys("voter123");
+                password.sendKeys("votercircle123");
                 console.log("Enter the password");
                 var passwrdnextBtn= element(by.css('div[id="passwordNext"]'));
                 passwrdnextBtn.click();
@@ -34,7 +34,7 @@ describe('Login and Logout to supporter platform using Google account', function
                 console.log("Click on account option in bottom navigation bar");
                 var Logoutlink =element(by.xpath("//span[contains(text(),'Logout')]"));
                 Logoutlink.click();
-                console.log("Successfully logged Out");
+                expect(element(by.xpath("//h6[contains(text(),'Support your favorite')]")).isPresent()).toBe(true);
             })
 
         })
